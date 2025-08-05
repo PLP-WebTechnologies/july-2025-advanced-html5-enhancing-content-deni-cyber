@@ -1,0 +1,161 @@
+<!--
+Submit a single HTML file named enhanced-form.html. It should include:
+
+Well-structured content using lists, tables, and media.
+
+A complete HTML5 form including a variety of input fields.
+
+Correct use of form attributes such as placeholder, required, autocomplete, and readonly.
+
+HTML5 validation features implemented correctly across all relevant fields.
+
+A clear, accessible layout using semantic tags.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced HTML5 Form</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced HTML5 Form Demo</h1>
+    <p>This page demonstrates a rich and accessible HTML5 form with various features.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>About This Page</h2>
+      <ul>
+        <li>Semantic HTML structure</li>
+        <li>Various input types with validation</li>
+        <li>Tables and lists</li>
+        <li>Embedded media</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sample Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Validation</td>
+            <td>Checks for valid email, number, etc.</td>
+          </tr>
+          <tr>
+            <td>Placeholder</td>
+            <td>Guides the user on what to enter</td>
+          </tr>
+          <tr>
+            <td>Readonly</td>
+            <td>Shows pre-filled uneditable fields</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media Content</h2>
+      <article>
+        <img src="https://via.placeholder.com/600x200.png?text=Sample+Image" alt="Sample Banner Image">
+        <video controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </article>
+    </section>
+
+    <section>
+      <h2>User Registration Form</h2>
+      <form action="/submit" method="post" autocomplete="on">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">-- Select --</option>
+            <option value="KE">Kenya</option>
+            <option value="US">USA</option>
+            <option value="UK">UK</option>
+          </select>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Settings</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,15}$" title="5-15 characters, letters, numbers, and underscores only">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6">
+
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" required minlength="6">
+
+          <label>
+            <input type="checkbox" name="subscribe" checked>
+            Subscribe to newsletter
+          </label>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..."></textarea>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Extra Details</legend>
+
+          <label for="color">Favourite Colour:</label>
+          <input type="color" id="color" name="color">
+
+          <label for="range">Satisfaction (1–10):</label>
+          <input type="range" id="range" name="satisfaction" min="1" max="10">
+
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+
+          <label for="readonly-field">Referral Code:</label>
+          <input type="text" id="readonly-field" name="referral" value="AUTOGEN2025" readonly>
+
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Enhanced Form Demo. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
